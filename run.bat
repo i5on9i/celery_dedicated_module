@@ -1,1 +1,1 @@
-celery -A pworker worker -l info
+celery -A pworker worker -l info --config=celconfig.py

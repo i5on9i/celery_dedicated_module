@@ -1,0 +1,1 @@
+celery -A pworker beat -l info --config=celconfig.py
