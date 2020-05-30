@@ -18,6 +18,11 @@ SQL_CONFIG_DB = 'db2'
 SQL_CONFIG_USER = 'celery' if not DEBUG else 'root'
 SQL_CONFIG_PASSWD = 'celery' if not DEBUG else 'rootpasswd'
 
+SCHEDULER_DB_ENGINE = 'mysql+mysqlconnector://{user}:{pw}@{host}/{db}?charset=utf8'\
+    .format(host=SQL_CONFIG_HOST,
+        user=SQL_CONFIG_USER,
+        pw=SQL_CONFIG_PASSWD,
+        db=SQL_CONFIG_DB)
 result_backend = 'db+mysql://{user}:{password}@{host}/{dbname}'\
                             .format(user=SQL_CONFIG_USER, password=SQL_CONFIG_PASSWD,
                                     host=SQL_CONFIG_HOST, dbname=SQL_CONFIG_DB)

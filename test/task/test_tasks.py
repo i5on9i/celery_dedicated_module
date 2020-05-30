@@ -21,5 +21,5 @@ class TestAddTask(unittest.TestCase):
     def test_addition(self):
         res = xsum([3, 5])
         self.assertEqual(res, 8)
-        self.assertEqual(self.result, 8)
+        self.assertEqual(self.result, 8, 'result-test')
         
